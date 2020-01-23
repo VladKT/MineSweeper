@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,39 @@
     <title>MineSweeper</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body onload="initGame()" oncontextmenu="return false;">
     <div>
-        <h1></h1>
+        <h1>MineSweeper</h1>
+        <h2>Highest score: <span></span></h2>
     </div>
-    <div class="marked"> Marked: <span></span>
+    <div>
+        <button class="beginner" onclick="changeDiff(this)">Beginner</button>
+        <button class="medium" onclick="changeDiff(this)">Medium</button>
+        <button class="expert" onclick="changeDiff(this)">Expert</button>
+
     </div>
-    <div class="smiley">
-        <button class="reset" onclick="initGame()">🙂</button>
+    <div class="containter">
+        <div class="marked"> Flags left: <span></span>
+        </div>
+        <div class="smiley">
+            <button class="reset" onclick="initGame()"></button>
+        </div>
+        <div class="timer"> Time: <span>0</span> sec
+        </div>
     </div>
-    <div class="timer"> Time: <span>0</span> sec
-    </div>
-    
+
     <div>
         <table>
             <tbody class="board"></tbody>
-          </table>
+        </table>
+    </div>
+    <div>
+        <div class="hints hint-1" onclick="enableHint(this)">Hint </div>
+        <div class="hints hint-2" onclick="enableHint(this)">Hint </div>
+        <div class="hints hint-3" onclick="enableHint(this)">Hint </div>
     </div>
     <script src="js/main.js"></script>
 </body>
+
 </html>
